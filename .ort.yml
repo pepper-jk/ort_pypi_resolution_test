@@ -1,0 +1,6 @@
+analyzer:
+  packageManagers: # package_managers in .ort.yml IIRC
+    Pip:
+      options:
+        operatingSystem: windows
+        pythonVersion: 3.10
