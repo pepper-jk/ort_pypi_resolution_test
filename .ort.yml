@@ -1,0 +1,74 @@
+
+# doesn't work
+package_configurations:
+- id: "PyPI::pillow:9.2.0"
+  source_artifact_url: "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz"
+  license_finding_curations:
+  - path: "src/Tk/_tkmini.h"
+    start_lines: "3"
+    line_count: 2
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
+  - path: "src/Tk/_tkmini.h"
+    start_lines: "13"
+    line_count: 45
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
+  - path: "Pillow-9.2.0/src/Tk/_tkmini.h"
+    start_lines: "3"
+    line_count: 2
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
+  - path: "Pillow-9.2.0/src/Tk/_tkmini.h"
+    start_lines: "13"
+    line_count: 45
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
+
+# does work
+# package_configurations:
+# - id: "PyPI::pillow:9.2.0"
+#   vcs:
+#     type: "Git"
+#     url: "https://github.com/python-pillow/Pillow.git"
+#   license_finding_curations:
+#   - path: "src/Tk/_tkmini.h"
+#     start_lines: "3"
+#     line_count: 2
+#     detected_license: "TCL"
+#     reason: "INCORRECT"
+#     comment: "test curation"
+#     concluded_license: "Vim"
+#   - path: "src/Tk/_tkmini.h"
+#     start_lines: "13"
+#     line_count: 45
+#     detected_license: "TCL"
+#     reason: "INCORRECT"
+#     comment: "test curation"
+#     concluded_license: "Vim"
+
+# just to be sure
+curations:
+  license_findings:
+  - path: "src/Tk/_tkmini.h"
+    start_lines: "3"
+    line_count: 2
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
+  - path: "src/Tk/_tkmini.h"
+    start_lines: "13"
+    line_count: 45
+    detected_license: "TCL"
+    reason: "INCORRECT"
+    comment: "test curation"
+    concluded_license: "Vim"
